@@ -22,11 +22,6 @@ namespace XUnitAndFluentAssertionDemo
 
             return $"Hello {_firstName} {_lastName} !";
         }
-
-        public string Your()
-        {
-            return $"Hello {_firstName} {_lastName} !";
-        }
     }
 
     public class MissingFirstNameException: Exception
