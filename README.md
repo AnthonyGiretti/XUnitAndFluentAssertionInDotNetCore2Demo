@@ -8,6 +8,7 @@ Sample of unit testing in .NET Core 2 app using XUnit and FluentAssertion
 
 ### Install XUnit VisualStudio Runner
 This package allow to Visual Studio to discover XUnit unit tests, if you don't install it, Visual Studio won't detect them.
+
 ``PM> Install-Package xunit.runner.console -Version 2.3.1``
 
 ### Learn more about XUnit
@@ -18,6 +19,7 @@ You can learn more about XUnit here:
 
 ### Install Fluent Assertion
 Fluent Assertion is in release candidate for .NET Core
+
 ``PM> Install-Package FluentAssertions -Version 5.0.0-rc0002``
 
 ### Learn more about Fluent Assertion
