@@ -12,7 +12,7 @@ This package allow to Visual Studio to discover XUnit unit tests, if you don't i
 
 ### Learn more about XUnit
 You can learn more about XUnit here: 
-(https://xunit.github.io/docs/getting-started-dotnet-core)[https://xunit.github.io/docs/getting-started-dotnet-core]
+[https://xunit.github.io/docs/getting-started-dotnet-core](https://xunit.github.io/docs/getting-started-dotnet-core)
 
 ## Setup XUnit in Visual Studio
 
@@ -22,6 +22,6 @@ Fluent Assertion is in release candidate for .NET Core
 
 ### Learn more about Fluent Assertion
 You can learn more about FluentAssertions here: 
-(http://fluentassertions.com/documentation.html)[http://fluentassertions.com/documentation.html]
+[http://fluentassertions.com/documentation.html](http://fluentassertions.com/documentation.html)
 
 Enjoy :)
