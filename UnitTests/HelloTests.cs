@@ -31,23 +31,5 @@ namespace UnitTests
                 .Contain("Doe");
 
         }
-
-        [Fact]
-        public void HelloManShouldBeRaiseExceptionWhenFirstNameIsNotSet()
-        {
-            // Arrange
-            var hello = new Hello("", "Doe");
-
-            //Act
-            Action actionHelloMan = () => hello.HelloMan();
-
-
-            //Assert
-            actionHelloMan
-                .Should()
-                .Throw<MissingFirstNameException>()
-                .WithMessage("FirstName is missing");
-
-        }
     }
 }

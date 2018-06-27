@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
+[assembly: InternalsVisibleTo("UnitTests")]
 namespace XUnitAndFluentAssertionDemo
 {
-    public class Hello
+    internal class Hello
     {
         private string _firstName { get; set; }
         private string _lastName { get; set; }
