@@ -22,7 +22,12 @@ namespace XUnitAndFluentAssertionDemo
             if (string.IsNullOrEmpty(_firstName))
                 throw new MissingFirstNameException();
 
-            return $"Hello {_firstName} {_lastName} !";
+            return this.HelloMan(_firstName, _lastName);
+        }
+
+        private string HelloMan(string firstName, string lastName)
+        {
+            return $"Hello {firstName} {lastName} !";
         }
     }
 
