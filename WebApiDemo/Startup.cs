@@ -35,8 +35,9 @@ namespace WebApiDemo
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
             app.UseMiddleware<CustomExceptionMiddleware>();
+            app.UseMvc();
+            
         }
     }
 }
