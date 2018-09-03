@@ -44,7 +44,7 @@ namespace WebApiDemo
 
             response.ContentType = "application/json";
             response.StatusCode = statusCode;
-            await response.WriteAsync(JsonConvert.SerializeObject(new
+            await response.WriteAsync(JsonConvert.SerializeObject(new CustomErrorResponse
             {
                 Message = message,
                 Description = description
