@@ -16,7 +16,7 @@ namespace UnitTests
         public async Task WhenACustomExceptionIsRaised_CustomExceptionMiddlewareShouldHandleItToCustomErrorResponseAndCorrectHttpStatus()
         {
             // Arrange
-            var middleware = new CustomExceptionMiddleware(next: (innerHttpContext) =>
+            var middleware = new CustomExceptionMiddleware((innerHttpContext) =>
             {
                 throw new NotFoundCustomException("Test", "Test");
             });
