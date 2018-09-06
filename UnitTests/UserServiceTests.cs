@@ -15,7 +15,7 @@ namespace UnitTests
     public class UserServiceTests
     {
         [Fact]
-        public async Task Test()
+        public async Task WhenACorrectUrlIsProvided_ServiceShouldReturnAlistOfUsers()
         {
             // Arrange
             var users = new List<User>
