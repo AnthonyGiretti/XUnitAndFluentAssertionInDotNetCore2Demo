@@ -57,5 +57,28 @@ namespace UnitTests
             .And
             .Contain(x => x.LastName == "Doe");
         }
-    }
+        
+        [Fact]
+        public async Task WhenABadUrlIsProvided_ServiceShouldReturnNull()
+        {
+           // Arrange
+           var httpClientFactoryMock = Substitute.For<IHttpClientFactory>();
+           var url = "http://bad.uri";
+           var fakeHttpMessageHandler = new FakeHttpMessageHandler(new HttpResponseMessage() {
+              StatusCode = HttpStatusCode.NotFound
+           });
+           var fakeHttpClient = new HttpClient(fakeHttpMessageHandler);
+
+           httpClientFactoryMock.CreateClient().Returns(fakeHttpClient);
+
+           // Act
+           var service = new UserService(httpClientFactoryMock);
+           var result = await service.GetUsers(url);
+
+          // Assert
+          result
+         .Should()
+         .BeNullOrEmpty();
+      }
+   }    
 }
