@@ -16,14 +16,14 @@ namespace WebApiDemo.Data
             _httpFactory = httpFactory;
         }
 
-        public async Task<List<Users>> GetUsers(string url)
+        public async Task<List<User>> GetUsers(string url)
         {
             using (HttpClient httpclient = _httpFactory.CreateClient())
             using (HttpResponseMessage response = await httpclient.GetAsync(url))
             {
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    List<Users> users = await response.Content.ReadAsAsync<List<Users>>();
+                    List<User> users = await response.Content.ReadAsAsync<List<User>>();
                     return users;
                 }
                 return null;
